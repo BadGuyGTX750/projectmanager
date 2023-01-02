@@ -1,5 +1,5 @@
 package com.example.projectmanager.entities;
 
 public enum ProjectStatus {
-    INDEVELOPMENT, FINISHED
+    NOTSTARTED, INDEVELOPMENT, PAUSED, FINISHED
 }
