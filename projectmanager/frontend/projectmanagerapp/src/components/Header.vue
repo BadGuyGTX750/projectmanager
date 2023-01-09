@@ -1,7 +1,10 @@
 <template>
     <header>
         <h3>Project Manager</h3>  
-        <AddProjectButton /> 
+        <div>
+            <AddProjectButton :toggleForm="toggleForm" :text="toggleForm ? 'Close':'Add Task'"
+                @toggle-add-project-form="this.$emit('toggle-add-project-form')" /> 
+        </div>
     </header>
 </template>
 
@@ -10,6 +13,9 @@ import AddProjectButton from './AddProjectButton.vue';
 
 export default {
     name: 'Header',
+    props: {
+        toggleForm: Boolean
+    },
     components: {
         AddProjectButton
     }
